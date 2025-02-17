@@ -6,15 +6,15 @@ export default function LoginPage() {
     
 
 
-      <div className="w-1/2 bg-green-100 flex flex-col justify-center items-center p-10">
+      <div className="w-1/2 bg-green-200 flex flex-col justify-center items-center p-10">
         <Image
-          src="/images-removebg-preview (1).png" 
-          width={200}
-          height={200}
+          src="/image1-removebg-preview.png" 
+          width={300}
+          height={300}
           alt="Lovebirds"
         />
-        <h2 className="text-lg font-semibold mt-5">Maecenas mattis egestas</h2>
-        <p className="text-center text-gray-600 mt-2">
+        <h2 className="text-lg font-semibold mt-5 text-gray-600">Maecenas mattis egestas</h2>
+        <p className="text-center text-gray-500 mt-2">
           Erdum et malesuada fames ac ante ipsum primis in faucibus.
         </p>
       </div>
@@ -22,11 +22,12 @@ export default function LoginPage() {
     
 
       <div className="w-1/2 bg-white flex flex-col justify-center items-center p-10">
-        <h1 className="text-2xl font-bold "> Lovebirds</h1>
+        <h1 className="text-2xl font-extrabold italic mb-20"> Lovebirds</h1>
 
-        <form className="w-full max-w-sm">
+        <form className="w-full  max-w-sm">
+          <h2 className="text-l text-center text-gray-500 font-[serif] mb-5">Welcome to Lovebirds</h2>
           <div className="mb-4">
-            <label className="block text-gray-700">Username or Email</label>
+            <label className="block text-gray-700 text-m">Username or Email</label>
             <input
               type="text"
               placeholder="shubhali"
@@ -35,7 +36,7 @@ export default function LoginPage() {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700">Password</label>
+            <label className="block text-gray-700 text-m">Password</label>
             <input
               type="password"
               placeholder="********"
