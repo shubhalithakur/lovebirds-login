@@ -31,7 +31,9 @@ export default function LoginPage() {
             <input
               type="text"
               placeholder="shubhali"
-              className="w-full mt-1 px-4 py-2 border rounded-lg "
+              className="w-full mt-1 px-4 py-2 border rounded-lg 
+              hover:border-green-500 focus:border-green-600
+              focus:ring-2 focus:ring-green-300 "
             />
           </div>
 
@@ -40,28 +42,31 @@ export default function LoginPage() {
             <input
               type="password"
               placeholder="********"
-              className="w-full mt-1 px-4 py-2 border rounded-lg"
+              className="w-full mt-1 px-4 py-2 border rounded-lg
+              hover:border-green-500 focus:border-green-600
+              focus:ring-2 focus:ring-green-300"
             />
           </div>
 
           <div className="flex justify-between items-center">
-            <a href="#" className="text-sm text-gray-500 ">
+            <a href="#" className="text-sm text-gray-500 hover:text-green-500 hover:underline">
               Forgot password?
             </a>
           </div>
 
           <button
             type="submit"
-            className="w-full bg-gray-800 text-white py-2 rounded-lg mt-4">Sign in</button>
+            className="w-full bg-gray-800 text-white py-2 rounded-lg mt-4 hover:bg-green-400">Sign in</button>
 
-          <div className="text-center my-4 text-gray-500">or</div>
+          <div className="text-center my-4 text-gray-500 hover:text-green-400">or</div>
 
           <button className="w-full flex items-center justify-center border py-2 rounded-lg">
             Sign in with Google
           </button>
 
-          <p className="text-center text-gray-600 mt-4">
-            New Lovebirds? <a href="#" className="text-green-600">Create Account</a>
+          <p className="text-center text-gray-600 mt-4 hover:text-red-400">
+            New Lovebirds? 
+          <a href="#" className="text-green-600 hover:underline">Create Account</a>
           </p>
         </form>
       </div>
