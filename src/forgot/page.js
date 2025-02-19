@@ -1,8 +1,12 @@
+"use client"
+import {useRouter} from 'next/navigation'
+
 export default function ForgotPasswordPage() {
     
     const [email, setEmail] = useState("");// to store the user's input
     const router = useRouter();//navigation between pages
-
+    
+    
 const handleReset = (e) => {
     e.preventDefault();//Prevents the default form submission behavior
    
@@ -12,7 +16,7 @@ const handleReset = (e) => {
         return;
     }
     alert("Password reset link sent to " + email);// sending a password reset link
-        router.push("/app");
+        router.push("/");
     };
 
 return (
@@ -35,7 +39,7 @@ return (
     </button>
     <button
         type="button"
-        onClick={() => router.push("/app")}
+        onClick={() => router.push("/")}
         className="w-full text-gray-500 mt-2 hover:text-green-500 hover:underline text-center">
         Back to Login
     </button>

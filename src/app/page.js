@@ -2,6 +2,7 @@
 import Image from "next/image";//This imports the Image component from Next.js
 import { useState } from "react";//Imports the useState hook from React,
 import { useRouter } from "next/navigation";// Imports the useRouter hook from Next.js
+import Link from "next/link";
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
@@ -75,12 +76,11 @@ export default function LoginPage() {
 
     
           <div className="flex justify-between items-center text-sm">
-            <button
-              type="button"
-              onClick={() => router.push("/forgot")}
+            <Link
+              href="forgot"
               className="text-gray-500 hover:text-green-500 hover:underline transition-all duration-300">
               Forgot password?
-            </button>
+            </Link>
           </div>
 
 
