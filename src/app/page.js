@@ -36,7 +36,7 @@ export default function LoginPage() {
       </div>
 
    
-      <div className="w-full h-auto md:w-1/2 flex flex-col justify-center items-center bg-white p-5 mt-16 md:mt-0
+      <div className="w-full h-screen md:w-1/2 flex flex-col justify-center items-center bg-white p-5 mt-16 md:mt-0
       max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg">
         <h1 className="text-xl text-gray-900">Lovebirds</h1>
 
@@ -74,11 +74,13 @@ export default function LoginPage() {
           </div>
 
     
-          <div className="flex justify-between items-center text-sm ">
-          <a href="/forgot" className="text-gray-500 hover:text-green-500
-             hover:underline transition-all duration-300">
-             Forgot password?
-            </a>
+          <div className="flex justify-between items-center text-sm">
+            <button
+              type="button"
+              onClick={() => router.push("/forgot")}
+              className="text-gray-500 hover:text-green-500 hover:underline transition-all duration-300">
+              Forgot password?
+            </button>
           </div>
 
 
@@ -114,3 +116,8 @@ export default function LoginPage() {
     </div>
   );
 }
+
+
+
+
+
