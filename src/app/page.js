@@ -1,6 +1,6 @@
 "use client";//This directive ensures the component runs on the client-side
 import Image from "next/image";//This imports the Image component from Next.js
-import { useState } from "react";//Imports the useState hook from React,
+import { useState } from "react";//Imports the useState hook from React.
 import { useRouter } from "next/navigation";// Imports the useRouter hook from Next.js
 import Link from "next/link";
 
@@ -80,7 +80,7 @@ export default function LoginPage() {
 
           <p className="text-center text-gray-600 mt-2">
             New to Lovebirds?{" "}
-            <Link href="/register" className="text-green-600 hover:underline">
+            <Link href="/create-account" className="text-green-600 hover:underline">
               Create Account
             </Link>
           </p>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const accessKey = "SktVTEKWgA9i0X4XyGhXNbqqk1rZI-4kBac5KaLXymE";
 
@@ -9,6 +9,13 @@ export default function HomePage() {
     const [page, setPage] = useState(1);// to track the number of pages by default set as 1
     const [loading, setLoading] = useState(false);// track the images being fetched
     const [imageIds, setImageIds] = useState([]);// state to track image IDs
+
+
+    useEffect(() => {
+        fetch(`https://api.unsplash.com/photos?client_id=${accessKey}`)
+            .then((response) => response.json())
+            .then((data) => setImages(data));
+    }, []);
 
    // set page no. to 1, submission, reset, and call fetchImages
     const handleSearch = async (event) => {
@@ -38,8 +45,8 @@ export default function HomePage() {
     };
 
     return (
-        <div className="container mx-auto px-4 py-10">
-            <h1 className="text-4xl font-bold text-center mb-8">Image Search App</h1>
+        <div className="container mx-auto px-4 py-10 bg-black">
+            <h1 className="text-4xl font-bold text-center mb-8 text-fuchsia-950">Image Search App</h1>
 
             <form onSubmit={handleSearch} className="flex justify-center mb-6">
                 <input
@@ -54,12 +61,12 @@ export default function HomePage() {
                 </button>
             </form>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-5 gap-0 ">
                 {images.map((image) => (
                     <div key={image.id} className="search-result">
-                        <img src={image.urls.small} alt={image.alt_description} className="w-full h-56 object-cover rounded-lg shadow-md" />
+                        <img src={image.urls.small} className="w-full h-40 rounded-lg object-cover shadow-md" />
                         <a href={image.links.html} target="_blank" rel="noopener noreferrer" className="block mt-2 text-lg text-blue-600 hover:underline">
-                            {image.alt_description || "Untitled Image"}
+                           
                         </a>
                     </div>
                 ))}
